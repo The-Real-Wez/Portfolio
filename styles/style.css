@@ -11,6 +11,10 @@ body{
     font-family: sans-serif;
     line-height: 1.7;
 }
+
+span{
+    color: #ff003c;
+}
 img{
     width: 100%;
     display: block;
@@ -235,20 +239,62 @@ header{
     margin-bottom: 25px;
 }
 
-.contact_container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+.contact{
+    padding: 80px 10%;
+    background: #080808;
 }
-.contact_card{
-    width: 230px;
+
+.contact h2{
     text-align: center;
-    padding: 30px;
+    font-size: 2.5rem;
+    color: #ff003c;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #ff003c;
+}
+.contact form{
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;   
+}
+
+.input_group input,
+.input_group textarea{
+    width: 100%;
+    padding: 15px;
     background: #111;
-    border: 1px solid #ff003c;
+    color: #fff;
+    border: 2px solid #ff003c;
     border-radius: 15px;
+    outline: none;
+    font-size: 1rem;
     transition: .3s;
+}
+.input_group input:focus,
+.input_group textarea:focus{
+    box-shadow: 0 0 10px #ff003c;
+}
+
+textarea{
+    resize: none;
+}
+
+.summit-btn{
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #ff003c;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.summit-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px #ff003c;
 }
 
 .contact_card:hover{
@@ -259,4 +305,65 @@ header{
 .contact_card h3{
     color: #ff003c;
     margin-bottom: 10px;
+}
+
+footer{
+    padding: 30px;
+    text-align: center;
+    background: #0d0d0d;
+    border-top: 1px solid #ff003c;
+    box-shadow: 0 0 20px #ff003c;
+}
+
+@media(max-width:900px){
+    .hero{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero_buttons{
+        justify-content: center;
+    }
+
+    .navbar{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav_links{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero_text h1{
+        font-size: 3rem;
+    }
+
+    .hero_image img{
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media(max-width:600px){
+    section{
+        padding: 70px 8%;
+    }
+
+    .skills_card,
+    .project_card,
+    .contact_card,
+    .about_info div{
+        width: 100%;
+    }
+
+    .hero_buttons{
+        flex-direction: column;
+    }
+
+    .btn{
+        width: 100%;
+        text-align: center;
+    }
+
 }
